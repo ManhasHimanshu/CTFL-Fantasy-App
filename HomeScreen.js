@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, SafeAreaView} from 'react-native';
 
 export default function HomeScreen(){
     return(
-        <View>
+        <SafeAreaView>
             <Text>This is the Home Screen</Text>
-        </View>
+        </SafeAreaView>
     );
 }
