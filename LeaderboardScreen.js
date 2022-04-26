@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, ScrollView, View, Text} from 'react-native';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 
 const LeaderboardScreen = () => {
@@ -7,18 +7,9 @@ const LeaderboardScreen = () => {
         <View style={styles.container}>
             <Text>This is the Leaderboard Screen </Text>
             <Text>The Table Goes Here</Text>
-            
-        </View>
-    );
-};
-
-export default function LeaderboardScreen() {
-    return (
-        <View style={styles.container}>
-        <Grid>
+            <Grid style ={TableProperties.container}>
             <Col size={50}>
             <Row style={styles.cell}>
-                <Text>A</Text>
             </Row>
             <Row style={styles.cell}>
                 <Text>B</Text>
@@ -41,7 +32,7 @@ export default function LeaderboardScreen() {
                 <Text>G</Text>
             </Row>
             <Row style={styles.cell}>
-                <Text>H</Text>
+                <Text>h</Text>
             </Row>
             </Col>
             <Col size={25}>
@@ -60,12 +51,28 @@ export default function LeaderboardScreen() {
             </Col>
         </Grid>
         </View>
+        
     );
-    }
+};
+
+
+
+export default LeaderboardScreen;
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#EEEEEE',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+})
+
+const TableProperties = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 50,
+        backgroundColor: 'white',
         alignItems: 'center',
         justifyContent: 'center',
       },
